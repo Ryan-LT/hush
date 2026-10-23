@@ -25,7 +25,7 @@ export default function Support() {
           and Do Not Disturb.
         </li>
         <li>Set your working hours, then add routines such as lunch or deep work.</li>
-        <li>Optionally connect Google Calendar in Settings so meetings, focus time and out-of-office events set your status.</li>
+        <li>Optionally connect Google Calendar from the Calendars section of the dashboard so meetings, focus time and out-of-office events set your status.</li>
         <li>Hush checks every minute and updates Slack only when your status should change.</li>
       </ul>
 
