@@ -1,0 +1,23 @@
+# Create the Slack app at https://api.slack.com/apps → Create New App → From a manifest.
+# Redirect URL points at the deployed app; add more if you attach a custom domain.
+display_information:
+  name: Hush
+  description: Your Slack status, on autopilot.
+  long_description: Hush sets your Slack status, presence and Do Not Disturb from your working hours, weekly routines and Google Calendar. It only manages your own status and never reads messages. Free, with no ads in your status.
+  background_color: "#16151c"
+oauth_config:
+  redirect_urls:
+    - https://usehush.pages.dev/auth/slack/callback
+  scopes:
+    user:
+      - users.profile:read
+      - users.profile:write
+      - users:read
+      - users:write
+      - dnd:read
+      - dnd:write
+      - emoji:read
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

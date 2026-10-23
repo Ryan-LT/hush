@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hush",
+  // Background Worker: the every-minute sync. The website and API run on Cloudflare Pages (wrangler.jsonc).
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-06-01",
+  // Don't serve on the account-wide *.workers.dev subdomain
+  "workers_dev": false,
+  "preview_urls": false,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hush",
+      // Replace with the id printed by `wrangler d1 create hush`
+      "database_id": "00603db8-01fb-4d5c-b93f-bf6a74325c30",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Every minute: work out each user's state and push changes to Slack
+  "triggers": { "crons": ["* * * * *"] },
+  "vars": {
+    // Public URL of the deployed app (OAuth redirects). .dev.vars overrides it locally.
+    "APP_URL": "https://usehush.pages.dev",
+    // fetch() calls the cron may make per run. Workers Free allows 50; raise to ~900 on Workers Paid.
+    "FETCH_BUDGET": "45"
+  },
+  "observability": { "enabled": true }
+}

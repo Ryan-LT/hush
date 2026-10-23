@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare Pages project: the static site in out/ plus the API in out/_worker.js (see npm run build).
+  // The every-minute sync runs in a separate Worker: wrangler.worker.jsonc.
+  "name": "usehush",
+  "pages_build_output_dir": "./out",
+  "compatibility_date": "2026-06-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hush",
+      "database_id": "00603db8-01fb-4d5c-b93f-bf6a74325c30",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "APP_URL": "https://usehush.pages.dev",
+    "FETCH_BUDGET": "45"
+  }
+}
