@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { LegalPage } from '@/components/landing/legal'
+import { CONTACT_EMAIL as CONTACT } from '@/lib/site'
 
 export const metadata: Metadata = { title: 'Privacy' }
-
-const CONTACT = 'thinh.le.sdev@gmail.com'
 
 export default function Privacy() {
   return (

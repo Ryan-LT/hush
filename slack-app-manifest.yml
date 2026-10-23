@@ -10,11 +10,9 @@ oauth_config:
     - https://usehush.pages.dev/auth/slack/callback
   scopes:
     user:
-      - users.profile:read
       - users.profile:write
       - users:read
       - users:write
-      - dnd:read
       - dnd:write
       - emoji:read
 settings:

@@ -1,6 +1,6 @@
 import type { SlackState } from '../src/shared/types'
 
-export const SLACK_USER_SCOPES = ['users.profile:read', 'users.profile:write', 'users:read', 'users:write', 'dnd:read', 'dnd:write']
+export const SLACK_USER_SCOPES = ['users.profile:write', 'users:read', 'users:write', 'dnd:write']
 
 /** Token stored for the local demo user; Slack calls are simulated. */
 export const DEMO_TOKEN = 'demo'

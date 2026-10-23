@@ -107,4 +107,4 @@ migrations/         D1 schema
 test/               engine tests (vitest)
 ```
 
-Before launching publicly, replace the placeholder contact details in `src/app/privacy` and `src/app/terms` and set the source link in the footer.
+Contact email and source URL live in `src/lib/site.ts`.

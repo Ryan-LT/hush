@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { BLOCK_HEX, COLORS } from '@/shared/engine'
 import { api } from '@/lib/api'
 import { browserTimeZone } from '@/lib/format'
+import { SOURCE_URL } from '@/lib/site'
 import { cn } from '@/lib/utils'
 import { Logo } from '../brand/logo'
 import { GoogleIcon } from '../dashboard/calendar'
@@ -531,10 +532,13 @@ export function SiteFooter() {
           <Link href="/terms" className="hover:text-foreground">
             Terms
           </Link>
+          <Link href="/support" className="hover:text-foreground">
+            Support
+          </Link>
           <Link href="/app" className="hover:text-foreground">
             Dashboard
           </Link>
-          <a href="https://github.com" className="flex items-center gap-1.5 hover:text-foreground">
+          <a href={SOURCE_URL} className="flex items-center gap-1.5 hover:text-foreground">
             <Code2 className="size-4" /> Source
           </a>
         </nav>
